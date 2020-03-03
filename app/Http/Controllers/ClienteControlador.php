@@ -12,7 +12,7 @@ class ClienteControlador extends Controller
         $novoCliente = new Cliente();
         $novoCliente->name = $request['name'];
         $novoCliente->email = $request['email'];
-        $novoCliente->cpf = $request['cpf'];
+        $novoCliente->password = bcrypt($request['password']);
         $novoCliente->save();
     }
 
@@ -26,11 +26,13 @@ class ClienteControlador extends Controller
     }
 
     public function update(Request $request){
-        $cliente = Cliente::find($request['cliente_id']);
-        $cliente->name = $request['name'];
-        $cliente->email = $request['email'];
-        $cliente->cpf = $request['cpf'];
-        $cliente->save();
+        $UpdCliente = Cliente::find($request['cliente_id']);
+        $UpdCliente->name = $request['name'];
+        $UpdCliente->email = $request['email'];
+        $UpdCliente->password = bcrypt($request['password']);
+        $UpdCliente->save();
+
+        return response()->Json($UpdCliente);
     }
 
     public function deleteClienteById(Request $request){

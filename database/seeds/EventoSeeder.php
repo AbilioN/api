@@ -15,70 +15,128 @@ class EventoSeeder extends Seeder
             [
                 'name' => 'Abc x America',
                 'descricao' => 'Classico do estado decidindo classificacao para a serie B',
-                'categoria' => 'jogo',
+                'categoria_id' => 2,
                 'data_evento' => '2020-03-22',
-                'cidade' => 'natal'
+                'cidade_id' => 1
             ],
             [
                 'name' => 'Show do roberto carlos',
                 'descricao' => 'Grandes classicos do rei',
-                'categoria' => 'show',
+                'categoria_id' => 3,
                 'data_evento' => '2020-04-21',
-                'cidade' => 'rio de janeiro'
+                'cidade_id' => 5
             ],
 
             [
                 'name' => 'Gremio x Corinthians',
                 'descricao' => 'Jogo decisivo para o brasileirao serie A',
-                'categoria' => 'jogo',
+                'categoria_id' => 2,
                 'data_evento' => '2020-04-14',
-                'cidade' => 'sao paulo'
+                'cidade_id' => 4
             ],
             [
                 'name' => 'DevOps Trainning',
-                'descricao' => 'Maior evento multiempresarial do estado do RN',
-                'categoria' => 'evento',
+                'descricao' => 'Maior evento multiempresarial de TI do estado do RN',
+                'categoria_id' => 1,
                 'data_evento' => '2020-04-08',
-                'cidade' => 'natal'
+                'cidade_id' => 1
             ],
 
             [
                 'name' => 'Saga entrentenimento ',
                 'descricao' => 'Maior evento nerd&geek do nordeste',
-                'categoria' => 'evento',
+                'categoria_id' => 1,
                 'data_evento' => '2020-06-18',
-                'cidade' => 'natal'
+                'cidade_id' => 1
             ],
 
             [
                 'name' => 'U2 Brazillian Tour',
                 'descricao' => 'Show unico da banda inglesa no Brasil',
-                'categoria' => 'show',
+                'categoria_id' => 3,
                 'data_evento' => '2020-05-28',
-                'cidade' => 'brasilia'
+                'cidade_id' => 3
             ],
             [
                 'name' => 'Flamengo x Fluminense',
                 'descricao' => 'Valendo a lideranca da 28ª rodada do brasileirao',
-                'categoria' => 'jogo',
+                'categoria_id' => 2,
                 'data_evento' => '2020-04-02',
-                'cidade' => 'rio de janeiro'
+                'cidade_id' => 5
             ],
 
             [
                 'name' => 'Sao paulo x Palmeiras',
                 'descricao' => 'Mais uma rivalidade paulista em campo',
-                'categoria' => 'jogo',
+                'categoria_id' => 2,
                 'data_evento' => '2020-03-14',
-                'cidade' => 'sao paulo'
+                'cidade_id' => 4
             ],
             [
                 'name' => 'Atletico MG x Guara',
                 'descricao' => 'Valendo classificacao para a libertadores',
-                'categoria' => 'jogo',
+                'categoria_id' => 2,
                 'data_evento' => '2020-05-23',
-                'cidade' => 'brasilia'
+                'cidade_id' => 3
             ],
+            [
+                'name' => 'The wall',
+                'descricao' => 'O maior espetaculo multimidia da terra agora no Brasil',
+                'categoria_id' => 3,
+                'data_evento' => '2020-06-12',
+                'cidade_id' => 5
+            ],
+            [
+                'name' => 'The wall',
+                'descricao' => 'O maior espetaculo multimidia da terra agora no Brasil',
+                'categoria_id' => 3,
+                'data_evento' => '2020-06-17',
+                'cidade_id' => 4
+            ],
+            [
+                'name' => 'Vasco x Botafogo',
+                'descricao' => 'Mais um classico carioca valendo quartas de finais no campeonato estadual',
+                'categoria_id' => 2,
+                'data_evento' => '2020-07-21',
+                'cidade_id' => 5
+            ],
+            [
+                'name' => 'David Gilmour South America Tour 2020',
+                'descricao' => 'Os grandes sucessos do pink floyd num show inesquecivel ',
+                'categoria_id' => 3,
+                'data_evento' => '2020-08-12',
+                'cidade_id' => 5
+            ],
+            [
+                'name' => 'David Gilmour South America Tour 2020',
+                'descricao' => 'Os grandes sucessos do pink floyd num show inesquecivel ',
+                'categoria_id' => 3,
+                'data_evento' => '2020-08-16',
+                'cidade_id' => 4
+            ],
+
+            [
+                'name' => 'SpottedFest',
+                'descricao' => 'Maior micareta universitaria do nordeste esta devolta!',
+                'categoria_id' => 3,
+                'data_evento' => '2020-12-23',
+                'cidade_id' => 1
+            ],
+            [
+                'name' => 'David Gilmour South America Tour 2020',
+                'descricao' => 'Os grandes sucessos do pink floyd num show inesquecivel ',
+                'categoria_id' => 3,
+                'data_evento' => '2020-08-12',
+                'cidade_id' => 5
+            ],
+
+            [
+                'name' => 'Flamengo x Atletico MG',
+                'descricao' => 'Duelo de gigantes valendo a lideranca do brasileirao',
+                'categoria_id' => 2,
+                'data_evento' => '2020-05-23',
+                'cidade_id' => 5
+            ]
         ]);
     }
 }

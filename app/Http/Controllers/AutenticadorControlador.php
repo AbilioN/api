@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
+use App\Cliente;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -15,13 +15,13 @@ class AutenticadorControlador extends Controller
                 'email' => 'required|string|email|',
                 'password' => 'required|string|confirmed'
             ]);       
-            $user = new User([
+            $cliente = new Cliente([
                 'name' => $request->name,
                 'email' => $request->email,
                 'password' => bcrypt($request->password)
             ]);
 
-            $user->save();
+            $cliente->save();
 
             return response()->json([
                 'res' => 'usuario criado com sucesso'
@@ -46,8 +46,8 @@ class AutenticadorControlador extends Controller
                 'res' => 'acesso negado'
             ],401);
         }
-        $user = $request->user();
-        $token = $user->createToken('Token de acesso')->accessToken;
+        $cliente = $request->user();
+        $token = $cliente->createToken('Token de acesso')->accessToken;
 
         return response()->Json([
             'token' => $token

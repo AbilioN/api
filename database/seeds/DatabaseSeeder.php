@@ -13,6 +13,5 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(ClienteSeeder::class);
         $this->call(EventoSeeder::class);
-        $this->call(UserSeeder::class);
     }
 }

@@ -13,19 +13,22 @@ class ClienteSeeder extends Seeder
     {
         DB::table('clientes')->insert([
             [
-                'name' => 'joao',
-                'email' => 'joao@gmail.com',
-                'cpf' => '01254875218'
+                'name' => 'cliente01',
+                'email' => 'cliente01@gmail.com',
+                'password' => bcrypt('user123')
+
             ],
             [
-                'name' => 'maria',
-                'email' => 'maria@gmail.com',
-                'cpf' => '58412369578'
+                'name' => 'cliente02',
+                'email' => 'cliente02@gmail.com',
+                'password' => bcrypt('user123')
+
             ],
             [
-                'name' => 'pedro',
-                'email' => 'pedro@gmail.com',
-                'cpf' => '15789625485'
+                'name' => 'cliente03',
+                'email' => 'cliente03@gmail.com',
+                'password' => bcrypt('user123')
+
             ],
         ]);
     }

@@ -17,6 +17,10 @@ class CreateIngressosTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('evento_id');
             $table->foreign('evento_id')->references('id')->on('eventos');
+            $table->unsignedBigInteger('zona_id');
+            $table->foreign('zona_id')->references('id')->on('zonas');
+            $table->unsignedBigInteger('tipo_id');
+            $table->foreign('tipo_id')->references('id')->on('tipos');
             $table->timestamps();
         });
     }

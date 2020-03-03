@@ -17,9 +17,11 @@ class CreateEventosTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('descricao');
-            $table->string('categoria');
+            $table->unsignedBigInteger('categoria_id');
+            $table->foreign('categoria_id')->references('id')->on('categorias');
+            $table->unsignedBigInteger('cidade_id');
+            $table->foreign('cidade_id')->references('id')->on('cidades');
             $table->date('data_evento');
-            $table->string('cidade');
             $table->timestamps();
         });
     }

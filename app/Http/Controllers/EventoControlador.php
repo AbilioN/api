@@ -11,9 +11,9 @@ class EventoControlador extends Controller
         $novoEvento = new Evento();
         $novoEvento->name = $request['name'];
         $novoEvento->descricao = $request['descricao'];
-        $novoEvento->categoria = $request['categoria'];
+        $novoEvento->categoria = $request['categoria_id'];
         $novoEvento->data_evento = $request['data_evento'];
-        $novoEvento->cidade = $request['cidade'];
+        $novoEvento->cidade = $request['cidade_id'];
         $novoEvento->save();
     }
 
@@ -25,13 +25,15 @@ class EventoControlador extends Controller
         return response()->Json($eventoById);
     }
     public function update(Request $request){
-        $evento = Evento::find($request['id']);
-        $evento->name = $request['name'];
-        $evento->descricao = $request['descricao'];
-        $evento->categoria = $request['categoria'];
-        $evento->data_evento = $request['data_evento'];
-        $evento->cidade = $request['cidade'];
-        $evento->save();
+        $UpdEvento = Evento::find($request['id']);
+        $UpdEvento->name = $request['name'];
+        $UpdEvento->descricao = $request['descricao'];
+        $UpdEvento->categoria = $request['categoria_id'];
+        $UpdEvento->data_evento = $request['data_evento'];
+        $UpdEvento->cidade = $request['cidade_id'];
+        $UpdEvento->save();
+
+        return response()->Json($UpdEvento);
     }
     public function deleteEventoById(Request $request){
         $deleteEventoById = Evento::find($request['id']);
