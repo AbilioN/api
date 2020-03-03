@@ -47,13 +47,13 @@ Route::post('/user' , function(Request $request){
         });
         
         Route::middleware('auth:api')->group(function(){
-            Route::get('eventos' , 'EventoControlador@getAll');
+            Route::get('evento' , 'EventoControlador@getAll');
             Route::post('evento-por-id' , 'EventoControlador@getEventoById');
             Route::post('novo-evento' , 'EventoControlador@create');
             Route::post('editar-evento' , 'EventoControlador@update');
             Route::post('deletar-evento' , 'EventoControlador@delete');
             
-            Route::get('clientes' ,'ClienteControlador@getAll');
+            Route::get('cliente' ,'ClienteControlador@getAll');
             Route::post('cliente-por-id' , 'ClienteControlador@getClienteById');
             Route::post('novo-cliente' , 'ClienteControlador@create');
             Route::post('editar-cliente' , 'ClienteControlador@update');

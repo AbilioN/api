@@ -11,9 +11,11 @@ class EventoControlador extends Controller
         $novoEvento = new Evento();
         $novoEvento->name = $request['name'];
         $novoEvento->descricao = $request['descricao'];
-        $novoEvento->categoria = $request['categoria_id'];
+        $novoEvento->categoria_id = intval($request['categoria_id']);
         $novoEvento->data_evento = $request['data_evento'];
-        $novoEvento->cidade = $request['cidade_id'];
+        $novoEvento->cidade_id = intval($request['cidade_id']);
+
+        // return response()->Json($novoEvento);
         $novoEvento->save();
     }
 
@@ -28,9 +30,9 @@ class EventoControlador extends Controller
         $UpdEvento = Evento::find($request['id']);
         $UpdEvento->name = $request['name'];
         $UpdEvento->descricao = $request['descricao'];
-        $UpdEvento->categoria = $request['categoria_id'];
+        $UpdEvento->categoria_id = intval($request['categoria_id']);
         $UpdEvento->data_evento = $request['data_evento'];
-        $UpdEvento->cidade = $request['cidade_id'];
+        $UpdEvento->cidade_id = intval($request['cidade_id']);
         $UpdEvento->save();
 
         return response()->Json($UpdEvento);

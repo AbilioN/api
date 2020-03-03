@@ -29,6 +29,12 @@ class AutenticadorControlador extends Controller
     }
 
     public function login(Request $request){
+
+        // return response()->Json([
+        //     'email' => $request['email'],
+        //     'senha' => $request['password']
+        // ]);
+
         $request->validate([
            
             'email' => 'required|string|email',

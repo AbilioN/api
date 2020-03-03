@@ -15,19 +15,19 @@ class ClienteSeeder extends Seeder
             [
                 'name' => 'cliente01',
                 'email' => 'cliente01@gmail.com',
-                'password' => bcrypt('user123')
+                'password' => bcrypt('cliente123')
 
             ],
             [
                 'name' => 'cliente02',
                 'email' => 'cliente02@gmail.com',
-                'password' => bcrypt('user123')
+                'password' => bcrypt('cliente123')
 
             ],
             [
                 'name' => 'cliente03',
                 'email' => 'cliente03@gmail.com',
-                'password' => bcrypt('user123')
+                'password' => bcrypt('cliente123')
 
             ],
         ]);
