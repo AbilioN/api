@@ -46,7 +46,7 @@ class EventoSeeder extends Seeder
                 'name' => 'Saga entrentenimento ',
                 'descricao' => 'Maior evento nerd&geek do nordeste',
                 'categoria_id' => 1,
-                'data_evento' => '2020-06-18',
+                'data_evento' => '2020-06-07',
                 'cidade_id' => 1
             ],
 
@@ -69,7 +69,7 @@ class EventoSeeder extends Seeder
                 'name' => 'Sao paulo x Palmeiras',
                 'descricao' => 'Mais uma rivalidade paulista em campo',
                 'categoria_id' => 2,
-                'data_evento' => '2020-03-14',
+                'data_evento' => '2020-03-09',
                 'cidade_id' => 4
             ],
             [
@@ -81,14 +81,14 @@ class EventoSeeder extends Seeder
             ],
             [
                 'name' => 'The wall',
-                'descricao' => 'O maior espetaculo multimidia da terra agora no Brasil',
+                'descricao' => 'O maior espetaculo multimidia da terra agora no Brasil agora no RJ',
                 'categoria_id' => 3,
                 'data_evento' => '2020-06-12',
                 'cidade_id' => 5
             ],
             [
                 'name' => 'The wall',
-                'descricao' => 'O maior espetaculo multimidia da terra agora no Brasil',
+                'descricao' => 'O maior espetaculo multimidia da terra agora no Brasil agora em SP',
                 'categoria_id' => 3,
                 'data_evento' => '2020-06-17',
                 'cidade_id' => 4
@@ -102,16 +102,16 @@ class EventoSeeder extends Seeder
             ],
             [
                 'name' => 'David Gilmour South America Tour 2020',
-                'descricao' => 'Os grandes sucessos do pink floyd num show inesquecivel ',
+                'descricao' => 'Os grandes sucessos do pink floyd num show inesquecivel agora no RJ ',
                 'categoria_id' => 3,
                 'data_evento' => '2020-08-12',
                 'cidade_id' => 5
             ],
             [
                 'name' => 'David Gilmour South America Tour 2020',
-                'descricao' => 'Os grandes sucessos do pink floyd num show inesquecivel ',
+                'descricao' => 'Os grandes sucessos do pink floyd num show inesquecivel agora em SP ',
                 'categoria_id' => 3,
-                'data_evento' => '2020-08-16',
+                'data_evento' => '2020-08-08',
                 'cidade_id' => 4
             ],
 
@@ -119,17 +119,10 @@ class EventoSeeder extends Seeder
                 'name' => 'SpottedFest',
                 'descricao' => 'Maior micareta universitaria do nordeste esta devolta!',
                 'categoria_id' => 3,
-                'data_evento' => '2020-12-23',
+                'data_evento' => '2020-12-22',
                 'cidade_id' => 1
             ],
-            [
-                'name' => 'David Gilmour South America Tour 2020',
-                'descricao' => 'Os grandes sucessos do pink floyd num show inesquecivel ',
-                'categoria_id' => 3,
-                'data_evento' => '2020-08-12',
-                'cidade_id' => 5
-            ],
-
+          
             [
                 'name' => 'Flamengo x Atletico MG',
                 'descricao' => 'Duelo de gigantes valendo a lideranca do brasileirao',

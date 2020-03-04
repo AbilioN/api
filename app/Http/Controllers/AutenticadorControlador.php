@@ -52,6 +52,7 @@ class AutenticadorControlador extends Controller
                 'res' => 'acesso negado'
             ],401);
         }
+
         $cliente = $request->user();
         $token = $cliente->createToken('Token de acesso')->accessToken;
 

@@ -13,7 +13,15 @@ class ClienteControlador extends Controller
         $novoCliente->name = $request['name'];
         $novoCliente->email = $request['email'];
         $novoCliente->password = bcrypt($request['password']);
-        $novoCliente->save();
+        if($novoCliente->save()){
+            return response()->Json([
+                'res' => 'cliente criado com sucesso'
+                ]);
+        }else{
+            return response()->Json([
+                'res' => 'cliente nao pôde ser criado'
+                ]);
+        }
     }
 
     public function getAll(Request $request){
@@ -35,9 +43,18 @@ class ClienteControlador extends Controller
         return response()->Json($UpdCliente);
     }
 
-    public function deleteClienteById(Request $request){
+    public function delete(Request $request){
         $deleteClienteById = Cliente::find($request['cliente_id']);
-        $deleteClienteById->delete();
+        
+        if($deleteClienteById->delete()){
+            return response()->Json([
+                'res' => 'cliente deletado com sucesso'
+                ]);
+        }else{
+            return response()->Json([
+                'res' => 'cliente nao pôde ser  deletado '
+                ]);
+        }
     }
 
 }

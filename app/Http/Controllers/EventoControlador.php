@@ -15,17 +15,26 @@ class EventoControlador extends Controller
         $novoEvento->data_evento = $request['data_evento'];
         $novoEvento->cidade_id = intval($request['cidade_id']);
 
-        // return response()->Json($novoEvento);
-        $novoEvento->save();
+        if($novoEvento->save()){
+            return response()->Json([
+                'res' => 'Evento cadastrado com sucesso'
+            ]);
+        }else{
+            return response()->Json([
+                'res' => 'Falha ao cadastrar evento'
+            ]);
+        }
     }
 
     public function getAll(Request $request){
         return response()->Json(Evento::all());
     }
+
     public function getEventoById(Request $request){
         $eventoById = Evento::find($request['id']);
         return response()->Json($eventoById);
     }
+
     public function update(Request $request){
         $UpdEvento = Evento::find($request['id']);
         $UpdEvento->name = $request['name'];
@@ -37,8 +46,16 @@ class EventoControlador extends Controller
 
         return response()->Json($UpdEvento);
     }
+    
     public function deleteEventoById(Request $request){
         $deleteEventoById = Evento::find($request['id']);
         $deleteEventoById->delete();
+    }
+
+   
+
+    public function eventosDaCidade(Request $request){
+        $eventosDaCidade = Evento::where('cidade_id', $request['cidade_id'])->get();
+        return response()->Json($eventosDaCidade);
     }
 }

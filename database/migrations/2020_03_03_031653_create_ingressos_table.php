@@ -21,6 +21,7 @@ class CreateIngressosTable extends Migration
             $table->foreign('zona_id')->references('id')->on('zonas');
             $table->unsignedBigInteger('tipo_id');
             $table->foreign('tipo_id')->references('id')->on('tipos');
+            $table->float('preco');
             $table->timestamps();
         });
     }
